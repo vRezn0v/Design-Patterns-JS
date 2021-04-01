@@ -24,6 +24,7 @@ const wordCounter = (filename, text) => {
     console.log(`[${Date.now()-start} ms] Filename: ${filename} words counted.`)
 }
 
+
 fs.readdir(path, (err, files) => {
     if (err) throw err
     files.forEach(file => {

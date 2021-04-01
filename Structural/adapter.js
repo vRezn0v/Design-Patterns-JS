@@ -42,13 +42,10 @@ async function getAdaptedData() {
 // updated adapter
 async function getAdaptedData() {
     var originalData = await fetchDataFromAPI()
-    var adapterData = originalData.map(function(obj) {
-        return {
-            name: obj.firstname + " " + obj.lastname,
-            age: obj.age,
-            role: obj.role
-        }
-    })
-
+    var adapterData = originalData.map((obj) => ({
+        name: obj.firstname + " " + obj.lastname,
+        age: obj.age,
+        role: obj.role
+    }))
     return adapterData
 }
